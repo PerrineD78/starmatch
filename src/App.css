@@ -4,3 +4,16 @@
   padding: 2rem;
   text-align: center;
 }
+body {
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../assets/nuit_etoilee.jpg"); /* Remplacez par l'URL de votre image de fond */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+}

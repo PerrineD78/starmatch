@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Characters from "./Components/Characters.jsx";
+import Inscription from "./Components/Inscription.jsx";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,11 @@ const router = createBrowserRouter([
     path: "/Characters",
     element: <Characters />,
   },
+  {
+    path: "/Inscription",
+    element: <Inscription />,
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

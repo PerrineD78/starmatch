@@ -14,13 +14,20 @@ function Inscription() {
                 <input type="text" name="Firstname" required/>
                 <label>Prénom</label>
             </div>
-            <div className="user-box">
+            {/* <div className="user-box">
                 <input type="date" name="Birthdate" required/>
-                <label>Date de naissance</label>
-            </div>
+                <label>Date de<br />naissance</label>
+            </div> */}
             <div className="user-box">
                 <input type="text" name="Species" required/>
                 <label>Ton espèce</label>
+            </div>
+            <div className="user-box">
+            <textarea
+                rows="4" // Set the number of visible text lines
+                cols="27" // Set the width of the textarea (number of characters)
+                placeholder="Dévoilez-vous en quelques mots"
+                />
             </div>
             <div className="user-box">
                 <input type="text" name="Pseudo" required/>

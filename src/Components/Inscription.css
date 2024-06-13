@@ -1,17 +1,18 @@
 * {
     background-image: url("../assets/nuit_étoilee.jpg");
+}
 
     .login-box {
         position: absolute;
         top: 50%;
         left: 50%;
-        width: 90%;
+        width: 300px;
         padding: 40px;
         transform: translate(-50%, -50%);
         box-sizing: border-box;
         box-shadow: 0 15px 25px rgba(34, 244, 6, 0.864);
         border-radius: 10px;
-        border: 1px solid #03f40f
+        border: 1px solid #03f40f;
     }
 
     .login-box .user-box {
@@ -40,6 +41,10 @@
       color: #fff;
       pointer-events: none;
       transition: .5s;
+    }
+
+    .login-box .user-box textarea {
+        color: #fff;
     }
       
     .login-box .user-box input:focus ~ label,
@@ -97,4 +102,3 @@
         background: linear-gradient(90deg, transparent, #03f40f);
         animation: btn-anim1 2s linear infinite;
       }
-}

@@ -79,7 +79,11 @@ function Page4() {
 
   return (
     <div className="page4">
-      <h1 className="page4-title">Sélectionner votre espèce préférée</h1>
+      <div className="logoAndBrand">
+        <h1 className="page4-brandTitle">StarMatch</h1>
+        <img className="logoStarmacth" src="src/assets/logo.png" alt="logoStarmatch" />
+      </div>
+      <h2 className="page4-title">Sélectionner votre espèce préférée</h2>
       <div className="characters-list">
         {currentCharacters.map((character) => (
           <div

@@ -21,7 +21,10 @@ function Inscription() {
             <form>
             {/* <form onSubmit={handleSubmit}> */}
                 <div className="user-box">
-                    <input type="text" name="Lastname"/>
+                    <input 
+                    type="text" 
+                    name="Lastname"
+                    required/>
                     <label>Nom</label>
                 </div>
                 <div className="user-box">
@@ -36,20 +39,22 @@ function Inscription() {
                 <div className="user-box">
                     <input 
                     type="text" 
-                    name="Species"/>
+                    name="Species"
+                    required/>
                     <label>Ton espèce</label>
                 </div>
-                <div className="user-box">
-                <textarea
+                <div className="user-box text-area">
+                    <textarea
                     rows="3" // Set the number of visible text lines
-                    cols="32" // Set the width of the textarea (number of characters)
+                    cols="38" // Set the width of the textarea (number of characters)
                     placeholder="Dévoilez-vous en quelques mots"
-                />
+                    />
                 </div>
                 <div className="user-box">
                     <input 
                     type="text" 
-                    name="Pseudo"/>
+                    name="Pseudo"
+                    required/>
                     <label>Pseudo</label>
                 </div>
                 <div className="user-box">

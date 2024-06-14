@@ -5,6 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Characters from "./Components/Characters.jsx";
 import Inscription from "./Components/Inscription.jsx";
+import Planete from "./Components/Planete.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
     path: "/Inscription",
     element: <Inscription />,
   },
+  {
+    path: "/Planete",
+    element: <Planete />,
+  },
+
 
 ]);
 

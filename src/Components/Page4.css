@@ -5,13 +5,13 @@ body {
   margin: 0;
   font-family: "Roboto Condensed", sans-serif;
   background-image: url("../assets/nuit_etoilee.jpg"); /* Remplacez par l'URL de votre image de fond */
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 125vh;
 }
 
 .page4 {
@@ -27,6 +27,7 @@ body {
   text-align: center;
   border: solid yellow;
   border-radius: 20%;
+  margin-bottom: 40px;
 }
 
 .characters-list {

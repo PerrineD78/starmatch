@@ -1,12 +1,13 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import Inscription from "./Components/Inscription";
+import Welcome from "./Components/Welcome";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+const [firstname, setFirstname] = useState("")
 
-  return <></>;
-}
-
+return (
+<div></div>
+);
+};
 export default App;

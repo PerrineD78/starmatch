@@ -1,4 +1,5 @@
 import React from 'react';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AccueilPage from './Components/AccueilPage.jsx';
 
 const App = () => {
@@ -11,25 +12,3 @@ const App = () => {
 
 export default App;
 
-
-
-
-/*
-
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-const App = () => {
-  return (
-    <Router>
-      <Switch>
-        <Route exact path="/">
-          <AccueilPage />
-        </Route>
-        <Route path="/select-planet">
-        <SelectPlanetPage />
-    </Route>
-      </Switch>
-    </Router>
-  );
-};
-
-*/

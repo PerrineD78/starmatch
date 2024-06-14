@@ -1,7 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.jsx'
+import './index.css'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import AccueilPage from './Components/AccueilPage.jsx'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Characters from "./Components/Characters.jsx";
 import Inscription from "./Components/Inscription.jsx";
@@ -12,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+  },
+  {
+    path: "/AccueilPage",
+    element: <AccueilPage />,
   },
   {
     path: "/Characters",
@@ -33,7 +39,7 @@ const router = createBrowserRouter([
 
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>

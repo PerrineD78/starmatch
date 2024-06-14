@@ -1,0 +1,46 @@
+ 
+#root {
+      --fontTitle: "Tiny5", Arial, Helvetica, sans-serif;
+      --radiusButton: 6px;
+      --fontColor: whitesmoke;
+      --buttonColor1: #1d6cc1;
+      --buttonColor2: #f65050;
+  
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: var(--fontColor);
+    margin-bottom: 40px;
+}
+
+.buttonMatch {
+    button {
+    margin: 15px;
+    width: 250px;
+    }
+}
+
+.flexMatch {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    img {
+        height: 200px;
+        width: auto;
+        border: 5px solid rgb(189, 76, 118);
+        margin:5px;
+    }
+}

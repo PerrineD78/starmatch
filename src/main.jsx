@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Characters from "./Components/Characters.jsx";
+import MatchScreen from "./Components/MatchScreen.jsx";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
   {
     path: "/Characters",
     element: <Characters />,
+  },
+  {
+    path: "/MatchScreen",
+    element: <MatchScreen />,
   },
 ]);
 

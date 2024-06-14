@@ -2,10 +2,14 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import Characters from "./Components/Characters";
+import MatchScreen from "./Components/MatchScreen";
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const App = () => {
     const [index, setIndex] = useState(0);
+    const [showDialog, setShowDialog] = useState(false);
+    const location = useLocation();
     
     const handleReject = () => {
       // Logique pour rejeter les données du personnage
@@ -15,20 +19,37 @@ const App = () => {
   
     const handleAccept = () => {
       if (characters[index].id === 4) {
-        console.log("Je suis ton père"); //remplir une state (if true : afficher texte / else : no texte)
+        // Afficher la fenêtre de dialogue "Je suis ton père"
+        setShowDialog(true);
+      } else if (characters[index].id === 14) {
+          // location.push("/MatchScreen"); // Redirige vers une autre page
+          window.location.pathname = "/MatchScreen"; // Redirige vers une autre page
+      } else {
+        // Logique pour accepter les données du personnage
+        console.log('Données acceptées:', characters[index]);
+        setIndex((prevIndex) => (prevIndex + 1) % characters.length);
       }
-      // Logique pour accepter les données du personnage
-      console.log('Données acceptées:', characters[index]);
-      setIndex((prevIndex) => (prevIndex + 1) % characters.length);
     };
 
     return (
       <div>
-        <img src={characters[index].image}/>
-        <h1>{characters[index].name}</h1>
-        {/* Afficher d'autres détails du personnage ici */}
-        <button onClick={handleReject}><img src="./src/assets/Croix.jpg"/></button>
-        <button onClick={handleAccept}><img src="./src/assets/Check.jpg"/></button>
+        {showDialog && (
+            <div className="modal">
+              <div className="modal-content">
+                <span className="close-button" onClick={() => setShowDialog(false)}>&times;</span>
+                <p>Tu ne peux pas matcher avec ton père, déconne pas !</p>
+              </div>
+            </div>
+        )}
+        <div className="character-container">
+          <img src={characters[index].image} className="character-image"/>
+          <h1>{characters[index].name}</h1>
+          {/* Afficher d'autres détails du personnage ici */}
+        </div>
+        <div className="swipe-buttons">
+          <button className="swipe-left" onClick={handleReject}><img src="./src/assets/Croix.jpg"/></button>
+          <button className="swipe-right" onClick={handleAccept}><img src="./src/assets/Check.jpg"/></button>
+        </div>
       </div>
     );
   };
@@ -437,13 +458,13 @@ const characters = [
   },
   {
     "id": 14,
-    "name": "Han Solo",
-    "height": 1.8,
-    "mass": 80,
+    "name": "Tealk",
+    "height": 1.9,
+    "mass": 110,
     "gender": "male",
     "homeworld": "corellia",
     "wiki": "http://starwars.wikia.com/wiki/Han_Solo",
-    "image": "https://vignette.wikia.nocookie.net/starwars/images/e/e2/TFAHanSolo.png",
+    "image": "https://th.bing.com/th/id/OIP.4Gg_xqWBfnWxhVzal5a0cgHaJ0?rs=1&pid=ImgDetMain",
     "born": -29,
     "bornLocation": "corellia",
     "died": 34,

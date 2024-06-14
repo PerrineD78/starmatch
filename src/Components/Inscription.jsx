@@ -1,47 +1,73 @@
 import { Link } from "react-router-dom";
 import "./Inscription.css"
-
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom' //hook de react router qui permet de naviguer 
 
 
 function Inscription() {
+    // const [firstnameInput, setfirstnameInput] = useState("");
+    // const navigate = useNavigate();
+    // const   handleInputChange = (e) => {
+    //         setfirstnameInput(e.target.value);
+    // };
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     setFirstname(firstnameInput);
+    //     navigate('/Welcome');
+
     return(
         <div className="login-box">
             <form>
+            {/* <form onSubmit={handleSubmit}> */}
                 <div className="user-box">
-                    <input type="text" name="Lastname" required/>
+                    <input type="text" name="Lastname"/>
                     <label>Nom</label>
                 </div>
                 <div className="user-box">
-                    <input type="text" name="Firstname" required/>
+                    <input 
+                    type="text" 
+                    name="Firstname" 
+                    // value={firstnameInput}
+                    // onChange={handleInputChange}
+                    required/>
                     <label>Prénom</label>
                 </div>
                 <div className="user-box">
-                    <input type="text" name="Species" required/>
+                    <input 
+                    type="text" 
+                    name="Species"/>
                     <label>Ton espèce</label>
                 </div>
                 <div className="user-box">
                 <textarea
-                rows="4" // Set the number of visible text lines
-                cols="32" // Set the width of the textarea (number of characters)
-                placeholder="Dévoilez-vous en quelques mots"
+                    rows="3" // Set the number of visible text lines
+                    cols="32" // Set the width of the textarea (number of characters)
+                    placeholder="Dévoilez-vous en quelques mots"
                 />
                 </div>
                 <div className="user-box">
-                    <input type="text" name="Pseudo" required/>
+                    <input 
+                    type="text" 
+                    name="Pseudo"/>
                     <label>Pseudo</label>
                 </div>
                 <div className="user-box">
-                    <input type="password" name="password" required/>
+                    <input 
+                    type="password" 
+                    name="password" 
+                    required/>
                     <label>Password</label>
                 </div>
                 <div className="user-box">
                 </div><center>
-                    <Link className="a" to="/Characters">ENREGISTRER
+                    {/* <button className="a" type="submit">ENREGISTRER</button> */}
+                    <Link className="a" to="/Welcome">ENREGISTRER
                     <span></span>
-                    </Link></center>
+                    </Link>
+                    </center>
             </form> 
         </div>
 )};
-
 
 export default Inscription;

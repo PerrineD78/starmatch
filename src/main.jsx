@@ -5,6 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Characters from "./Components/Characters.jsx";
 import Inscription from "./Components/Inscription.jsx";
+import Welcome from "./Components/Welcome.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,10 @@ const router = createBrowserRouter([
     path: "/Inscription",
     element: <Inscription />,
   },
-
+  {
+    path: "/Welcome",
+    element: <Welcome />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -1,13 +1,13 @@
 import { useState } from "react";
 import "./App.css";
+import Inscription from "./Components/Inscription";
+import Welcome from "./Components/Welcome";
 
+const App = () => {
+const [firstname, setFirstname] = useState("")
 
-function App() {
-
-  return 
-  <>
-  
-  </>;
-}
-
+return (
+<div></div>
+);
+};
 export default App;

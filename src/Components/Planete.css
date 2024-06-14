@@ -1,0 +1,17 @@
+#carouselContainer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    #img1, #img2, #img3, #img4, #img5, #img6, #img7 {
+        width : 8rem;
+    }
+
+    p {
+        color: white;
+        font-size: 2rem;
+        margin-left: 54px;
+    }
+}

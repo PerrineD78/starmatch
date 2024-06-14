@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AccueilPage from "./Components/AccueilPage.jsx";
 
 import Characters from "./Components/Characters.jsx";
+import MatchScreen from "./Components/MatchScreen.jsx";
 import Inscription from "./Components/Inscription.jsx";
 import Planete from "./Components/Planete.jsx";
 import Welcome from "./Components/Welcome.jsx";
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/Characters",
     element: <Characters />,
+  },
+  {
+    path: "/MatchScreen",
+    element: <MatchScreen />,
   },
   {
     path: "/Inscription",

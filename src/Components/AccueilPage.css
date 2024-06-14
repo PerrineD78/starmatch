@@ -3,7 +3,8 @@
 :root {
     --fontTitle: "Tiny5", Arial, Helvetica, sans-serif;
     --radiusButton: 6px;
-    --fontColor: whitesmoke;
+    --fontColor1: #f5f5f5;
+    --fontColor2: #222222;
     --buttonColor1: #1d6cc1;
     --buttonColor2: #f65050;
 }
@@ -33,7 +34,7 @@
 
 .title {
     margin-top: 0px;
-    color: var(--fontColor);
+    color: var(--fontColor1);
 }
 
 .logo {
@@ -52,7 +53,12 @@
 }
 
 .subtitle {
-    color: var(--fontColor);
+    color: var(--fontColor2);
+    animation: blink 1s infinite;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+        0 0 10px rgba(255, 255, 255, 0.6),
+        0 0 15px rgba(255, 255, 255, 0.4),
+        0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 .input-field {
@@ -75,6 +81,46 @@
 .create-account-btn:hover {
     background-color: var(--buttonColor2);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.audio-control-btn {
+    position: fixed;
+    top: 3px;
+    right: 3px;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 10;
+    animation: blink 1s infinite;
+}
+
+.audio-control-btn:focus {
+    outline: none;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    margin-left: -20px;
+    text-align: center;
+    width: 100%;
+    background: transparent;
+    color: var(--fontColor1);
+    font-family: var(--fontTitle);
+    font-size: 0.6rem;
 }
 
 @media (max-width: 480px) {

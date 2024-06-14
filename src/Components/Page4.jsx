@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./Page4.css";
 
 function Page4() {
@@ -110,7 +110,7 @@ function Page4() {
       {showAlert && selectedCard && (
         <div className="alert-message">
           <p className="alert-text">
-            Vous n'êtes pas compatible.
+            Vous n&aposêtes pas compatible.
             <br />
             Merci de sélectionner une autre espèce
           </p>

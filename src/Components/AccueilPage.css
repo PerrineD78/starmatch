@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+:root {
+    --fontTitle: "Tiny5", Arial, Helvetica, sans-serif;
+    --radiusButton: 6px;
+    --fontColor1: #f5f5f5;
+    --fontColor2: #222222;
+    --buttonColor1: #1d6cc1;
+    --buttonColor2: #f65050;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.accueil-container {
+    background-image: url('/src/assets/bg.jpeg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.title-container {
+    font-family: var(--fontTitle)
+}
+
+.title {
+    margin-top: 0px;
+    color: var(--fontColor1);
+}
+
+.logo {
+    width: 120px;
+    height: 120px;
+}
+
+.subtitle-container {
+    font-family: var(--fontTitle);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.subtitle {
+    color: var(--fontColor2);
+    animation: blink 1s infinite;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+        0 0 10px rgba(255, 255, 255, 0.6),
+        0 0 15px rgba(255, 255, 255, 0.4),
+        0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.input-field {
+    margin: 10px;
+    padding: 5px;
+    width: 100%;
+    max-width: 260px;
+}
+
+.create-account-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--buttonColor1);
+    border: 2px solid #000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.create-account-btn:hover {
+    background-color: var(--buttonColor2);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.audio-control-btn {
+    position: fixed;
+    top: 3px;
+    right: 3px;
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 10;
+    animation: blink 1s infinite;
+}
+
+.audio-control-btn:focus {
+    outline: none;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    margin-left: -20px;
+    text-align: center;
+    width: 100%;
+    background: transparent;
+    color: var(--fontColor1);
+    font-family: var(--fontTitle);
+    font-size: 0.6rem;
+}
+
+@media (max-width: 480px) {
+    .accueil-container {
+        background-size: auto 100%;
+    }
+
+    .title {
+        font-size: 3.5rem;
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .input-field {
+        font-size: 1rem;
+    }
+
+    .create-account-btn {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .accueil-container {
+        background-size: auto 100%;
+    }
+
+    .title {
+        font-size: 5rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+    }
+
+    .input-field {
+        font-size: 1.4rem;
+    }
+
+    .create-account-btn {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .accueil-container {
+        background-size: cover;
+    }
+
+    .title {
+        font-size: 6rem;
+    }
+
+    .subtitle {
+        font-size: 3rem;
+    }
+
+    .input-field {
+        font-size: 1.6rem;
+        max-width: 400px;
+    }
+
+    .create-account-btn {
+        font-size: 1.6rem;
+    }
+}
